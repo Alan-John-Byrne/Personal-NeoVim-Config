@@ -9,7 +9,7 @@ return {
   },
   config = true,
   keys = {
-    { "<leader>gs", "<cmd>Neogit kind=split<CR>", desc = "Open Neogit in a split window" },
+    { "<leader>gs", "<cmd>Neogit kind=split<CR>", desc = "Open Neogit status popup" },
     { "<leader>gc", "<cmd>Neogit commit<CR>", desc = "Open Neogit commit popup" },
     { "<leader>gp", "<cmd>Neogit push<CR>", desc = "Open Neogit push popup" },
     { "<leader>gb", "<cmd>Neogit bisect<CR>", desc = "Open Neogit bisect popup" },
