@@ -37,7 +37,7 @@ return {
         filetype = { "ps1", "psm1", "psd1" },
       }
     end,
-  }
+  },
 
   -- LSP for PowerShell NOTE: ONLY PROVIDES POSSIBLE PARAMETERS FOR CMDLET ON HOVER.
   {
