@@ -1,7 +1,7 @@
 -- IMPORTANT: UNDERSTAND THAT NONE OF THIS FILE ACTUALLY DOES ANYTHING. IT'S JUST AN EXAMPLE.
 -- Since this is just an example spec, don't actually load anything here and return an empty spec.
 -- stylua: ignore
-if true then return {} end
+if true then return {} end -- NOTE: THIS JUST RETURNS EMPTY SO EVERYTHING BELOW ISN'T RECOGNISED BY LAZY.NVIM (THE LAZYVIM PACKAGE MANAGER)
 
 return {
   -- add gruvbox

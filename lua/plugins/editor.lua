@@ -24,7 +24,7 @@ return {
     },
   },
 
-  -- Adding powershell to treesitter for .ps1 file highlights.
+  -- Adding powershell to treesitter for .ps1, .psm1 and .psd1 file highlights.
   {
     "nvim-treesitter/nvim-treesitter",
     opts = function()
@@ -34,27 +34,21 @@ return {
           url = "https://github.com/jrsconfitto/tree-sitter-powershell",
           files = { "src/parser.c" },
         },
-        filetype = "ps1",
-        used_by = { "psm1", "psd1", "pssc", "psxml", "cdxml" },
+        filetype = { "ps1", "psm1", "psd1" },
       }
     end,
-  },
+  }
 
-  -- LSP for PowerShell
+  -- LSP for PowerShell NOTE: ONLY PROVIDES POSSIBLE PARAMETERS FOR CMDLET ON HOVER.
   {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({})
       lspconfig.powershell_es.setup({
         filetypes = { "ps1", "psm1", "psd1" },
         bundle_path = "~/AppData/Local/nvim-data/mason/packages/powershell-editor-services",
         settings = { powershell = { codeFormatting = { Preset = "OTBS" } } },
-        init_options = {
-          enableProfileLoading = false,
-        },
       })
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
     end,
   },
 }
